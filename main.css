@@ -12,9 +12,21 @@
   font-display: swap;
 }
 
-.welcome-line-1, .welcome-line-2 {
+.page-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+.welcome-line {
     font-family: 'site_font',sans-serif;
     font-size: clamp(90px, 30vw, 150px);
     font-weight: 900;
     letter-spacing: -0.03em;
+    line-height: .6em;
+    position: absolute;
+    left: -25px;
+    bottom: 0px;
 }
