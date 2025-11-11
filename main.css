@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-variant-ligatures: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 @font-face {
@@ -12,11 +17,18 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'site_font_test';
+  src: url('fonts/site_font_test.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .page-wrapper {
   height: 100vh;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  justify-content: flex-end;
   position: relative;
   overflow: hidden;
 }
@@ -24,6 +36,7 @@
     font-family: 'site_font',sans-serif;
     font-size: clamp(90px, 30vw, 150px);
     font-weight: 900;
+    color: rgba(0, 0, 0, 0.85);
     letter-spacing: -0.03em;
     line-height: .6em;
     position: absolute;
@@ -32,7 +45,48 @@
 }
 
 .recipes {
+  margin: 10px 40px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
 
+.recipes ul li {
+  list-style: none;
+  text-align: right;
+  margin-bottom: -0.3em;
+}
+
+.recipes ul li a {
+  font-family: 'site_font', Georgia;
+  font-size: clamp(20px, 5vw, 25px);
+  color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  vertical-align: middle;
+}
+
+.recipes ul li a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.recipes ul li a::before {
+  content: attr(data-hover);
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%); /* Is this property with top:50% the best way to vertically center the hover text with the a element? */
+  margin-right: 10px;
+  opacity: 0;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: clamp(16px, 5vw, 20px);
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+
+.recipes ul li a:hover::before {
+  opacity: 1;
 }
 
 @media (max-width: 400px) {
