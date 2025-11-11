@@ -30,3 +30,15 @@
     left: -25px;
     bottom: 0px;
 }
+
+.recipes {
+
+}
+
+@media (max-width: 400px) {
+  .welcome-line {
+    top: 4px;
+    left: -16px;
+    bottom: auto;
+  }
+}
