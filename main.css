@@ -90,10 +90,22 @@ a {
   opacity: 1;
 }
 
-.about-us {
+.repeat_about_us, .food_about_us {
+  padding: 10px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.repeat_about_us {
   color: white;
   background-color: rgba(0, 0, 0, 0.85);
 }
+
+.food_about_us {
+  color: rgba(0, 0, 0, 0.85);
+  background-color: white;
+}
+
 @media (max-width: 450px) {
   .welcome-line {
     top: 4px;
