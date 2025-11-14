@@ -109,6 +109,7 @@ a {
 	left: 0px;
 	transform: rotate(90deg);
 }
+
 .about-us-inner {
 	font-family: Helvetica, sans-serif;
 	font-weight: bold;
@@ -118,8 +119,10 @@ a {
 	text-transform: uppercase;
 }
 
+
+
 @media (max-width: 450px) {
-	.welcome-line {
+	.welcome {
 		top: 4px;
 		left: auto;
 		right: 0px;
