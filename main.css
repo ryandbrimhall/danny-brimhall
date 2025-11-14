@@ -32,7 +32,7 @@ a {
   position: relative;
   overflow: hidden;
 }
-.welcome-line {
+.welcome {
     font-family: 'site_font',sans-serif;
     font-size: clamp(90px, 30vw, 150px);
     font-weight: 900;
