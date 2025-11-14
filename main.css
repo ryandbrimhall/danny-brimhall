@@ -36,7 +36,7 @@ a {
     font-family: 'site_font',sans-serif;
     font-size: clamp(90px, 30vw, 150px);
     font-weight: 900;
-    color: rgba(0, 0, 0, 0.85);
+    color: rgba(0 0 0 / 0.85);
     letter-spacing: -0.03em;
     line-height: .6em;
     position: absolute;
@@ -61,13 +61,13 @@ a {
 .recipes ul li a {
   font-family: 'site_font', Georgia;
   font-size: clamp(20px, 5vw, 25px);
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0 0 0 / 0.3);
   position: relative;
   vertical-align: middle;
 }
 
 .recipes ul li a:hover {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0 0 0 / 0.7);
 }
 
 .recipes ul li a::before {
@@ -79,7 +79,7 @@ a {
   margin-right: 10px;
   opacity: 0;
   white-space: nowrap;
-  color: rgba(0, 0, 0, 0.45);
+  color: rgba(0 0 0 / 0.45);
   font-size: clamp(14px, 5vw, 16px);
   text-transform: lowercase;
   transition: opacity 0.5s;
@@ -90,20 +90,25 @@ a {
   opacity: 1;
 }
 
-.repeat_about_us, .food_about_us {
-  padding: 10px;
+.about-us {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0 0 0 / 0.85);
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 30%;
+  left: 0px;
+}
+.about-us-inner {
   font-family: Helvetica, sans-serif;
   font-weight: bold;
-}
-
-.repeat_about_us {
+  font-size: 22px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.85);
-}
-
-.food_about_us {
-  color: rgba(0, 0, 0, 0.85);
-  background-color: white;
+  line-height: 1.3em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 450px) {
