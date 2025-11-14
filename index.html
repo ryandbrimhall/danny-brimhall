@@ -1,56 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danny Brimhall</title>
-    <link rel="stylesheet" href="main.css">
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Danny Brimhall</title>
+	<link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="page-wrapper">
-        <div class="welcome">Coming<br>&nbsp;&nbsp;&nbsp;Soon</div>
-        <div class="recipes">
-            <ul>
-                <li><a href="#" data-hover="Overnight, Chia Seeds, Yogurt, Dried Cherries, Honey &nbsp;//">Oats</a></li>
-                <li><a href="#" data-hover="Chocolate, Moldon Salt &nbsp;//">Cookies</a></li>
-                <li><a href="#" data-hover="Sourdough, Cheddar &nbsp;//">Grilled Cheese</a></li>
-                <li><a href="#" data-hover="Marmalade, Puff Pastry &nbsp;//">Brie</a></li>
-                <li><a href="#" data-hover="Arugula, Crutons, Dried Cherries &nbsp;//">Salad</a></li>
-                <li><a href="#" data-hover="Pâte Brisée, Bacon, Gruyère &nbsp;//">Quiche</a></li>
-                <li><a href="#" data-hover="Rosemary, Pork  &nbsp;//">Lasagna</a></li>
-                <li><a href="#" data-hover="Pomodoro, Parmesan &nbsp;//">Spaghetti</a></li>
-                <li><a href="#" data-hover="Thighs, Shallots, Grapes &nbsp;//">Chicken</a></li>
-                <li><a href="#" data-hover="Kale, Sausage, Orzo &nbsp;//">Soup</a></li>
-                <li><a href="#" data-hover="Ribeye, Butter, Rosemary &nbsp;//">Steak</a></li>
-                <li><a href="#" data-hover="Sourdough, Dijonnaise, Pickles, Ham &nbsp;//">Sandwich</a></li>
-                <li><a href="#" data-hover="Key Limes, Meringue, Graham Cracker &nbsp;//">Pie</a></li>
-                <li><a href="#" data-hover="Pork, Soy, Sesame Seeds &nbsp;//">Dumplings</a></li>
-                <li><a href="#" data-hover="Multicolored, Harissa, Crème Fraîche &nbsp;//">Carrots</a></li>
-            </ul>
-        </div>
-        <div class="about-us">
-            <div class="about-us-inner">Repeat</div>
-            <div class="about-us-inner">Repeat</div>
-            <div class="about-us-inner">Repeat</div>
-        </div>
-    </div>
-    <script src="js/gsap.min.js"></script>
-    <script src="js/SplitText.min.js"></script>
-    <script>
-        document.fonts.ready.then(() => {
-            let split = SplitText.create(".welcome", {type: "chars"});
+	<div class="page-wrapper">
+		<div class="welcome">
+			<div>Coming</div>
+			<div class="welcome2">Soon</div>
+		</div>
+		<div class="recipes">
+			<ul>
+				<li><a href="#" aria-label="Overnight, Chia Seeds, Yogurt, Dried Cherries, Honey &nbsp;//">Oats</a></li>
+				<li><a href="#" aria-label="Chocolate, Moldon Salt &nbsp;//">Cookies</a></li>
+				<li><a href="#" aria-label="Sourdough, Cheddar &nbsp;//">Grilled Cheese</a></li>
+				<li><a href="#" aria-label="Marmalade, Puff Pastry &nbsp;//">Brie</a></li>
+				<li><a href="#" aria-label="Arugula, Crutons, Dried Cherries &nbsp;//">Salad</a></li>
+				<li><a href="#" aria-label="Pâte Brisée, Bacon, Gruyère &nbsp;//">Quiche</a></li>
+				<li><a href="#" aria-label="Rosemary, Pork  &nbsp;//">Lasagna</a></li>
+				<li><a href="#" aria-label="Pomodoro, Parmesan &nbsp;//">Spaghetti</a></li>
+				<li><a href="#" aria-label="Thighs, Shallots, Grapes &nbsp;//">Chicken</a></li>
+				<li><a href="#" aria-label="Kale, Sausage, Orzo &nbsp;//">Soup</a></li>
+				<li><a href="#" aria-label="Ribeye, Butter, Rosemary &nbsp;//">Steak</a></li>
+				<li><a href="#" aria-label="Sourdough, Dijonnaise, Pickles, Ham &nbsp;//">Sandwich</a></li>
+				<li><a href="#" aria-label="Key Limes, Meringue, Graham Cracker &nbsp;//">Pie</a></li>
+				<li><a href="#" aria-label="Pork, Soy, Sesame Seeds &nbsp;//">Dumplings</a></li>
+				<li><a href="#" aria-label="Multicolored, Harissa, Crème Fraîche &nbsp;//">Carrots</a></li>
+			</ul>
+		</div>
+		<div class="about-us">
+			<div class="about-us-inner">Repeat</div>
+			<div class="about-us-inner">Repeat</div>
+			<div class="about-us-inner">Repeat</div>
+		</div>
+	</div>
+	<script src="js/gsap.min.js"></script>
+	<script src="js/SplitText.min.js"></script>
+	<script>
+		document.fonts.ready.then(() => {
+			let split = SplitText.create(".welcome", {type: "chars"});
 
-            gsap.from(split.chars, {
-            duration: 1, 
-            y: 100,       
-            autoAlpha: 0,
-            stagger: 0.03,
-            ease: 'power3.out'
-            });
-        });
+			gsap.from(split.chars, {
+			duration: 1, 
+			x: -100,       
+			autoAlpha: 0,
+			stagger: 0.03,
+			ease: 'power3.out'
+			});
 
-        
-    </script>
+			gsap.from('.recipes ul li', {
+			opacity: 0,
+			y: 100,
+			stagger: 0.02,
+			duration: .5,
+			});
+		});
+
+		
+	</script>
 </body>
 </html>
